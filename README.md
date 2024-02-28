@@ -22,6 +22,12 @@ After cloning the repository, install the project dependencies using Composer:
 composer install
 ```
 
+Create a new key for the Laravel application
+```bash
+php artisan key:generate
+```
+
+
 Configure your database connection in the .env file. Then run database migrations:
 ```bash 
 php artisan migrate
