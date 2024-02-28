@@ -48,11 +48,19 @@ php artisan serve
 - `GET /artists`: Get all artists.
 - `GET /artists/filter/active/{status}`: Filter artists by active/inactive status.
 - `GET /artists/filter/email/{email}`: Filter artists by email.
+   Or you can use the spatie query filter
+- `GET /artists`: Get all artists.
+- `GET /artists?filter[active]={1 or 0}`: Filter artists by active/inactive status.
+- `GET /artists?filter[email]={any_email_from_db_artists}`: Filter artists by email.
+- `GET /artists`: Get all artists.
 
 ## API Endpoints Examples
 
 The application will be available at http://localhost:8000 
 
 - `http://localhost:8000/artists`: Get all artists.
+- `http://localhost:8000/artists?filter[active]=1`: Filter active artists.
+- `http://localhost:8000//artists?filter[email]=any_email_from_db_artists`: Filter artists by email.
+   or
 - `http://localhost:8000/artists/filter/active/active|inactive`: Filter artists by active/inactive status.
 - `http://localhost:8000/artists/filter/email/any_email_from_db_artists`: Filter artists by email.

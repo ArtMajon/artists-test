@@ -10,7 +10,9 @@ class ArtistController extends Controller
 {
     public function index(): JsonResponse
     {
-        $artists = QueryBuilder::for(Artist::class)->get();
+        $artists = QueryBuilder::for(Artist::class)
+            ->allowedFilters('active','email')
+            ->get();
 
         return response()->json($artists);
     }
