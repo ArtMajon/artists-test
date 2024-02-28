@@ -3,7 +3,7 @@
 To get started with this project, you can clone the repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
+git clone git@github.com:ArtMajon/artists-test.git
 ```
 
 Once cloned, navigate to the project directory:
@@ -25,6 +25,11 @@ composer install
 Configure your database connection in the .env file. Then run database migrations:
 ```bash 
 php artisan migrate
+```
+
+After the migration, run a seeder to fill the database with fake artists.
+```bash 
+php artisan db:seed --class=ArtistSeeder
 ```
 
 You can run the application using the built-in PHP development server:
